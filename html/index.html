@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SullanaShield - Plataforma ciudadana para reportar inundaciones y recibir alertas ante el Fenómeno El Niño en Sullana.">
+  <title>SullanaShield | Protegiendo Sullana</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-shield.svg">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="inicio">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">
+        <img src="../assets/logo-shield.svg" alt="SullanaShield" class="logo__icon">
+        <div class="logo__text">
+          <span class="logo__name">SULLANASHIELD</span>
+          <span class="logo__tagline">Protegiendo Sullana</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link nav__link--active"><span class="nav__icon">🏠</span> Inicio</a></li>
+          <li><a href="#mapa" class="nav__link"><span class="nav__icon">🗺️</span> Mapa de Riesgos</a></li>
+          <li><a href="#reportar" class="nav__link"><span class="nav__icon">📋</span> Reportar Incidencia</a></li>
+          <li><a href="#alertas-inundacion" class="nav__link"><span class="nav__icon">🌊</span> Alertas</a></li>
+          <li><a href="#consejos" class="nav__link"><span class="nav__icon">💡</span> Consejos</a></li>
+          <li><a href="#nosotros" class="nav__link"><span class="nav__icon">ℹ️</span> Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link"><span class="nav__icon">✉️</span> Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Buscar zona o alerta..." aria-label="Buscar">
+          <button type="button" class="search-box__btn" aria-label="Buscar">🔍</button>
+        </div>
+        <button type="button" class="btn btn--login">👤 Iniciar sesión</button>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">PROTÉGETE DEL FENÓMENO EL NIÑO EN SULLANA</h1>
+        <p class="hero__desc">
+          Reporta incidencias, recibe alertas en tiempo real y accede a información oficial
+          para proteger a tu familia y tu comunidad ante inundaciones y otros riesgos.
+        </p>
+        <div class="hero__buttons">
+          <a href="#reportar" class="btn btn--primary">Reportar Incidencia</a>
+          <a href="#mapa" class="btn btn--outline">Ver Mapa de Riesgos</a>
+        </div>
+      </div>
+      <div class="hero__illustration">
+        <img src="../assets/hero-sullana.svg" alt="Ilustración de Sullana bajo lluvia e inundación" class="hero__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ESTADÍSTICAS ========== -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <article class="stat-card stat-card--blue">
+        <div class="stat-card__icon">📋</div>
+        <div class="stat-card__info">
+          <span class="stat-card__label">Reportes Activos</span>
+          <span class="stat-card__value" id="statReportes">126</span>
+          <span class="stat-card__sub" id="statReportesHoy">+12 hoy</span>
+        </div>
+      </article>
+      <article class="stat-card stat-card--red">
+        <div class="stat-card__icon">🔔</div>
+        <div class="stat-card__info">
+          <span class="stat-card__label">Alertas Hoy</span>
+          <span class="stat-card__value" id="statAlertas">8</span>
+          <span class="stat-card__sub">Activas</span>
+        </div>
+      </article>
+      <article class="stat-card stat-card--orange">
+        <div class="stat-card__icon">📊</div>
+        <div class="stat-card__info">
+          <span class="stat-card__label">Riesgo Actual</span>
+          <span class="stat-card__value stat-card__value--risk">ALTO</span>
+          <span class="stat-card__sub">En varias zonas de Sullana</span>
+        </div>
+      </article>
+      <article class="stat-card stat-card--green">
+        <div class="stat-card__icon">👥</div>
+        <div class="stat-card__info">
+          <span class="stat-card__label">Usuarios Registrados</span>
+          <span class="stat-card__value">2 345</span>
+          <span class="stat-card__sub">Comunidad activa</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== ALERTA DE INUNDACIONES (DESTACADO) ========== -->
+  <section class="flood-banner" id="alertas-inundacion">
+    <div class="container flood-banner__inner">
+      <div class="flood-banner__icon">🌊</div>
+      <div class="flood-banner__content">
+        <h2 class="flood-banner__title">Alerta de Inundaciones — Distrito de Sullana</h2>
+        <p class="flood-banner__text">
+          ¿Hay inundación en tu barrio? Reporta de inmediato para alertar a vecinos y autoridades.
+          Tu reporte ayuda a mapear las zonas afectadas y coordinar la ayuda.
+        </p>
+      </div>
+      <a href="#reportar" class="btn btn--danger">Reportar Inundación Ahora</a>
+    </div>
+  </section>
+
+  <!-- ========== CONTENIDO PRINCIPAL ========== -->
+  <main class="main-content">
+    <div class="container main-content__grid">
+
+      <!-- Mapa de Riesgos -->
+      <section class="panel panel--map" id="mapa">
+        <h2 class="panel__title">Mapa de Riesgos</h2>
+        <div class="map-legend">
+          <span class="legend-item"><span class="dot dot--red"></span> Inundaciones</span>
+          <span class="legend-item"><span class="dot dot--orange"></span> Desagües colapsados</span>
+          <span class="legend-item"><span class="dot dot--green"></span> Zonas con zancudos</span>
+          <span class="legend-item"><span class="dot dot--purple"></span> Calles bloqueadas</span>
+        </div>
+        <div class="map-container">
+          <img src="../assets/mapa-sullana.png" alt="Mapa del distrito de Sullana con zonas de riesgo" class="map-container__img">
+          <div class="map-pins" id="mapPins" aria-hidden="true"></div>
+          <div class="map-controls">
+            <button type="button" class="map-controls__btn" id="mapZoomIn" aria-label="Acercar">+</button>
+            <button type="button" class="map-controls__btn" id="mapZoomOut" aria-label="Alejar">−</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn--map" id="openMapBtn">Abrir mapa interactivo</button>
+      </section>
+
+      <!-- Formulario Reportar Incidencia -->
+      <section class="panel panel--form" id="reportar">
+        <h2 class="panel__title">Reportar Incidencia</h2>
+        <form id="reportForm" class="report-form" novalidate>
+          <fieldset class="form-group">
+            <legend class="form-label">Tipo de incidencia</legend>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="tipo" value="inundacion" checked>
+                <span>Inundación</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="tipo" value="desague">
+                <span>Desagüe colapsado</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="tipo" value="zancudos">
+                <span>Zancudos</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="tipo" value="calle">
+                <span>Calle bloqueada</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="tipo" value="otro">
+                <span>Otro</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="direccion" class="form-label">Dirección / Referencia</label>
+            <input type="text" id="direccion" name="direccion" class="form-input" placeholder="Ej: Av. Grau, Bellavista, cerca del colegio..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea id="descripcion" name="descripcion" class="form-textarea" rows="3" placeholder="Describe la situación: nivel del agua, calles afectadas, personas en riesgo..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fotografía (opcional)</label>
+            <div class="upload-box" id="uploadBox">
+              <input type="file" id="foto" name="foto" accept="image/*" class="upload-box__input">
+              <div class="upload-box__content" id="uploadContent">
+                <span class="upload-box__icon">📷</span>
+                <span>Arrastra una imagen o haz clic para subir</span>
+              </div>
+              <img id="photoPreview" class="upload-box__preview" alt="Vista previa" hidden>
+            </div>
+          </div>
+
+          <div class="form-group form-group--location">
+            <label class="form-label">Ubicación actual</label>
+            <button type="button" class="btn btn--location" id="getLocationBtn">📍 Obtener ubicación</button>
+            <span class="location-status" id="locationStatus"></span>
+            <input type="hidden" id="lat" name="lat">
+            <input type="hidden" id="lng" name="lng">
+          </div>
+
+          <div class="form-group">
+            <label for="nombre" class="form-label">Tu nombre (opcional)</label>
+            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Nombre o alias">
+          </div>
+
+          <button type="submit" class="btn btn--submit">✈️ Enviar Reporte</button>
+        </form>
+        <div class="form-message" id="formMessage" role="alert" hidden></div>
+      </section>
+
+      <!-- Alertas en Tiempo Real -->
+      <aside class="panel panel--alerts" id="alertas">
+        <h2 class="panel__title">Alertas en Tiempo Real</h2>
+        <div class="alerts-list" id="alertsList">
+          <!-- Generado por JavaScript -->
+        </div>
+        <a href="#alertas-inundacion" class="alerts-link">Ver todas las alertas →</a>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ========== CONSEJOS RÁPIDOS ========== -->
+  <section class="tips" id="consejos">
+    <div class="container tips__grid">
+      <article class="tip-card">
+        <div class="tip-card__icon">🏠</div>
+        <h3 class="tip-card__title">Evita zonas inundadas</h3>
+        <p class="tip-card__text">No transites por calles con agua. El agua puede ocultar huecos y corrientes peligrosas.</p>
+      </article>
+      <article class="tip-card">
+        <div class="tip-card__icon">🦟</div>
+        <h3 class="tip-card__title">Elimina agua estancada</h3>
+        <p class="tip-card__text">Vacía recipientes con agua acumulada para prevenir dengue y otras enfermedades.</p>
+      </article>
+      <article class="tip-card">
+        <div class="tip-card__icon">📞</div>
+        <h3 class="tip-card__title">Reporta cualquier incidencia</h3>
+        <p class="tip-card__text">Tu reporte ayuda a alertar a la comunidad y a las autoridades de Sullana.</p>
+      </article>
+      <article class="tip-card">
+        <div class="tip-card__icon">🔔</div>
+        <h3 class="tip-card__title">Mantente informado</h3>
+        <p class="tip-card__text">Consulta alertas oficiales y sigue las recomendaciones de Defensa Civil.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== NOTICIAS ========== -->
+  <section class="news">
+    <div class="container">
+      <h2 class="section-title">Últimas Noticias y Recomendaciones</h2>
+      <div class="news__grid">
+        <article class="news-card">
+          <div class="news-card__image news-card__image--1"></div>
+          <div class="news-card__body">
+            <h3 class="news-card__title">Lluvias intensas continuarán esta semana en Piura</h3>
+            <p class="news-card__excerpt">Senamhi alerta sobre precipitaciones moderadas a fuertes en la costa norte del Perú.</p>
+            <a href="#" class="news-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card__image news-card__image--2"></div>
+          <div class="news-card__body">
+            <h3 class="news-card__title">Municipalidad realiza limpieza de canales en Sullana</h3>
+            <p class="news-card__excerpt">Trabajos preventivos en los principales desagües del distrito para evitar inundaciones.</p>
+            <a href="#" class="news-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card__image news-card__image--3"></div>
+          <div class="news-card__body">
+            <h3 class="news-card__title">Recomendaciones ante inundaciones</h3>
+            <p class="news-card__excerpt">Indeci recomienda tener una mochila de emergencia y un plan familiar de evacuación.</p>
+            <a href="#" class="news-card__link">Leer más →</a>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-card__image news-card__image--4"></div>
+          <div class="news-card__body">
+            <h3 class="news-card__title">Puntos de acopio de ayuda humanitaria</h3>
+            <p class="news-card__excerpt">Conoce los centros habilitados para recibir donaciones en el distrito de Sullana.</p>
+            <a href="#" class="news-card__link">Leer más →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOSOTROS ========== -->
+  <section class="about" id="nosotros">
+    <div class="container about__inner">
+      <h2 class="section-title">Sobre SullanaShield</h2>
+      <p class="about__text">
+        SullanaShield es una plataforma ciudadana creada para que los pobladores del distrito de Sullana
+        puedan reportar inundaciones y otras incidencias relacionadas con el Fenómeno El Niño,
+        recibir alertas en tiempo real y acceder a información de prevención.
+        Trabajamos junto a la comunidad para proteger vidas y bienes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="contacto">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo logo--footer">
+          <img src="../assets/logo-shield.svg" alt="SullanaShield" class="logo__icon">
+          <div class="logo__text">
+            <span class="logo__name">SULLANASHIELD</span>
+            <span class="logo__tagline">Protegiendo Sullana</span>
+          </div>
+        </a>
+        <p class="footer__desc">Plataforma ciudadana de prevención ante el Fenómeno El Niño.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Enlaces rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#mapa">Mapa de Riesgos</a></li>
+          <li><a href="#reportar">Reportar Incidencia</a></li>
+          <li><a href="#alertas-inundacion">Alertas de Inundación</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Información</h4>
+        <ul>
+          <li><a href="#consejos">Consejos de prevención</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Instituciones aliadas</h4>
+        <ul>
+          <li>Municipalidad de Sullana</li>
+          <li>Defensa Civil</li>
+          <li>Indeci</li>
+          <li>Senamhi Piura</li>
+        </ul>
+      </div>
+
+      <div class="footer__social">
+        <h4 class="footer__heading">Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon">f</a>
+          <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+          <a href="#" aria-label="X Twitter" class="social-icon">𝕏</a>
+          <a href="#" aria-label="YouTube" class="social-icon">▶</a>
+        </div>
+        <p class="footer__contact">📧 contacto@sullanashield.pe</p>
+        <p class="footer__contact">📞 (073) 123-456</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 SullanaShield. Todos los derechos reservados. | Plataforma ciudadana de prevención ante el Fenómeno El Niño.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal mapa interactivo -->
+  <div class="modal" id="mapModal" hidden>
+    <div class="modal__backdrop" id="mapModalBackdrop"></div>
+    <div class="modal__content">
+      <button type="button" class="modal__close" id="closeMapModal" aria-label="Cerrar">&times;</button>
+      <h3 class="modal__title">Mapa Interactivo de Riesgos — Sullana</h3>
+      <div class="modal__map" id="modalMapContainer">
+        <img src="../assets/mapa-sullana.png" alt="Mapa interactivo del distrito de Sullana" class="modal__map-img" id="modalMapImg">
+      </div>
+      <p class="modal__note">Los puntos de colores representan reportes ciudadanos en tiempo real.</p>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

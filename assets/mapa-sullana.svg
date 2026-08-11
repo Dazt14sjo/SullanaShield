@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Fondo mapa -->
+  <rect width="400" height="300" fill="#eef2f6"/>
+  <!-- Calles horizontales -->
+  <rect x="0" y="60" width="400" height="8" fill="#d5dde5"/>
+  <rect x="0" y="120" width="400" height="8" fill="#d5dde5"/>
+  <rect x="0" y="180" width="400" height="8" fill="#d5dde5"/>
+  <rect x="0" y="240" width="400" height="8" fill="#d5dde5"/>
+  <!-- Calles verticales -->
+  <rect x="60" y="0" width="8" height="300" fill="#d5dde5"/>
+  <rect x="130" y="0" width="8" height="300" fill="#d5dde5"/>
+  <rect x="200" y="0" width="8" height="300" fill="#d5dde5"/>
+  <rect x="270" y="0" width="8" height="300" fill="#d5dde5"/>
+  <rect x="340" y="0" width="8" height="300" fill="#d5dde5"/>
+  <!-- Bloques -->
+  <rect x="10" y="10" width="45" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="75" y="10" width="50" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="145" y="10" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="215" y="10" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="285" y="10" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="355" y="10" width="35" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="10" y="70" width="45" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="75" y="70" width="50" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="145" y="70" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="215" y="70" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="285" y="70" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="355" y="70" width="35" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="10" y="130" width="45" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="75" y="130" width="50" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="145" y="130" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="215" y="130" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="285" y="130" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="355" y="130" width="35" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="10" y="190" width="45" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="75" y="190" width="50" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="145" y="190" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="215" y="190" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="285" y="190" width="48" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="355" y="190" width="35" height="45" fill="#dce4ec" rx="3"/>
+  <rect x="10" y="250" width="45" height="40" fill="#dce4ec" rx="3"/>
+  <rect x="75" y="250" width="50" height="40" fill="#dce4ec" rx="3"/>
+  <rect x="145" y="250" width="48" height="40" fill="#dce4ec" rx="3"/>
+  <rect x="215" y="250" width="48" height="40" fill="#dce4ec" rx="3"/>
+  <rect x="285" y="250" width="48" height="40" fill="#dce4ec" rx="3"/>
+  <rect x="355" y="250" width="35" height="40" fill="#dce4ec" rx="3"/>
+  <!-- R�o -->
+  <path d="M0 280 Q100 260 200 275 Q300 290 400 265 L400 300 L0 300 Z" fill="#b8d4f0" opacity="0.7"/>
+  <!-- Pines de riesgo -->
+  <circle cx="95" cy="95" r="8" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+  <circle cx="170" cy="155" r="8" fill="#e67e22" stroke="#fff" stroke-width="2"/>
+  <circle cx="240" cy="100" r="8" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+  <circle cx="310" cy="170" r="8" fill="#27ae60" stroke="#fff" stroke-width="2"/>
+  <circle cx="130" cy="210" r="8" fill="#8e44ad" stroke="#fff" stroke-width="2"/>
+  <circle cx="260" cy="220" r="8" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+  <circle cx="350" cy="110" r="8" fill="#e67e22" stroke="#fff" stroke-width="2"/>
+  <circle cx="55" cy="160" r="8" fill="#c0392b" stroke="#fff" stroke-width="2"/>
+  <!-- Etiqueta -->
+  <rect x="130" y="4" width="140" height="22" fill="#1a5fb4" rx="4" opacity="0.9"/>
+  <text x="200" y="19" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#fff" font-weight="600">DISTRITO DE SULLANA</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8dff5"/>
+      <stop offset="100%" stop-color="#e8f2fc"/>
+    </linearGradient>
+  </defs>
+  <!-- Cielo -->
+  <rect width="500" height="320" fill="url(#sky)"/>
+  <!-- Nubes -->
+  <ellipse cx="120" cy="60" rx="50" ry="25" fill="#fff" opacity="0.8"/>
+  <ellipse cx="160" cy="55" rx="40" ry="22" fill="#fff" opacity="0.7"/>
+  <ellipse cx="350" cy="45" rx="55" ry="28" fill="#fff" opacity="0.75"/>
+  <ellipse cx="390" cy="50" rx="35" ry="20" fill="#fff" opacity="0.65"/>
+  <!-- Lluvia -->
+  <g stroke="#1a5fb4" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+    <line x1="100" y1="90" x2="95" y2="110"/><line x1="130" y1="85" x2="125" y2="105"/>
+    <line x1="160" y1="95" x2="155" y2="115"/><line x1="200" y1="80" x2="195" y2="100"/>
+    <line x1="280" y1="88" x2="275" y2="108"/><line x1="320" y1="92" x2="315" y2="112"/>
+    <line x1="380" y1="78" x2="375" y2="98"/><line x1="420" y1="90" x2="415" y2="110"/>
+  </g>
+  <!-- Monta�as lejanas -->
+  <polygon points="0,180 80,120 160,180" fill="#a8c4e0" opacity="0.5"/>
+  <polygon points="100,180 200,100 300,180" fill="#8fb4d4" opacity="0.4"/>
+  <!-- R�o -->
+  <path d="M0 260 Q125 240 250 255 Q375 270 500 245 L500 320 L0 320 Z" fill="#1a5fb4" opacity="0.35"/>
+  <path d="M0 270 Q125 255 250 265 Q375 275 500 258" fill="none" stroke="#1a5fb4" stroke-width="2" opacity="0.5"/>
+  <!-- Puente -->
+  <rect x="180" y="230" width="140" height="8" fill="#555" rx="2"/>
+  <line x1="195" y1="238" x2="195" y2="260" stroke="#555" stroke-width="3"/>
+  <line x1="250" y1="238" x2="250" y2="260" stroke="#555" stroke-width="3"/>
+  <line x1="305" y1="238" x2="305" y2="260" stroke="#555" stroke-width="3"/>
+  <!-- Edificios -->
+  <rect x="30" y="160" width="45" height="90" fill="#d0dce8" stroke="#8899aa" stroke-width="1"/>
+  <rect x="38" y="170" width="10" height="12" fill="#a8c4e0"/><rect x="52" y="170" width="10" height="12" fill="#a8c4e0"/>
+  <rect x="38" y="190" width="10" height="12" fill="#a8c4e0"/><rect x="52" y="190" width="10" height="12" fill="#a8c4e0"/>
+  <rect x="85" y="140" width="55" height="110" fill="#c8d8e8" stroke="#8899aa" stroke-width="1"/>
+  <rect x="95" y="150" width="12" height="14" fill="#a8c4e0"/><rect x="112" y="150" width="12" height="14" fill="#a8c4e0"/>
+  <rect x="95" y="172" width="12" height="14" fill="#a8c4e0"/><rect x="112" y="172" width="12" height="14" fill="#a8c4e0"/>
+  <rect x="95" y="194" width="12" height="14" fill="#a8c4e0"/><rect x="112" y="194" width="12" height="14" fill="#a8c4e0"/>
+  <!-- Torre de agua -->
+  <rect x="340" y="120" width="30" height="15" fill="#8899aa" rx="2"/>
+  <line x1="355" y1="135" x2="355" y2="200" stroke="#8899aa" stroke-width="4"/>
+  <line x1="340" y1="200" x2="370" y2="200" stroke="#8899aa" stroke-width="3"/>
+  <rect x="380" y="150" width="50" height="100" fill="#d0dce8" stroke="#8899aa" stroke-width="1"/>
+  <rect x="390" y="162" width="12" height="14" fill="#a8c4e0"/><rect x="408" y="162" width="12" height="14" fill="#a8c4e0"/>
+  <rect x="390" y="184" width="12" height="14" fill="#a8c4e0"/><rect x="408" y="184" width="12" height="14" fill="#a8c4e0"/>
+  <!-- Palmeras -->
+  <line x1="450" y1="250" x2="450" y2="190" stroke="#5a7a4a" stroke-width="3"/>
+  <ellipse cx="450" cy="185" rx="25" ry="12" fill="#27ae60" opacity="0.7"/>
+  <ellipse cx="450" cy="180" rx="20" ry="10" fill="#2ecc71" opacity="0.6"/>
+  <line x1="470" y1="250" x2="472" y2="200" stroke="#5a7a4a" stroke-width="2.5"/>
+  <ellipse cx="474" cy="195" rx="18" ry="9" fill="#27ae60" opacity="0.6"/>
+  <!-- Inundaci�n en calle -->
+  <rect x="150" y="248" width="200" height="12" fill="#1a5fb4" opacity="0.45" rx="2"/>
+  <!-- Texto decorativo -->
+  <text x="250" y="305" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#1a5fb4" opacity="0.6">Sullana, Piura  Per�</text>
+</svg>
